@@ -26,6 +26,7 @@
             pixels_per_second: 1000,
             initial_css: {
                 "background": "#dddddd",
+                "background-size": "contain",
                 "opacity": 0.8,
                 "position": "absolute",
                 "top": source.offset().top,
@@ -68,8 +69,8 @@
                 .animate({
                     top: target.offset().top,
                     left: target.offset().left,
-                    height: target_height,
-                    width: target_width
+                    height: source.height()/2,
+                    width: source.width()/2
                 }, {
                     duration: duration
                 })
